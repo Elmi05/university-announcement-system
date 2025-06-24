@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {
   Box,
-  Container,
   Typography,
   Card,
   CardContent,
@@ -20,13 +19,10 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  ListItemButton,
   Divider,
   useTheme,
-  useMediaQuery,
   Paper,
   Alert,
-  LinearProgress,
   CssBaseline,
   Fade,
 } from '@mui/material'
@@ -34,13 +30,10 @@ import { alpha } from '@mui/material/styles'
 import {
   Dashboard,
   School,
-  People,
-  BarChart,
   Logout,
   Menu as MenuIcon,
   Announcement,
   Person,
-  TrendingUp,
   CalendarToday,
   Assignment,
 } from '@mui/icons-material'

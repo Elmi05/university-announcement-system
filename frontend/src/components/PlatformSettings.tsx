@@ -32,22 +32,12 @@ import {
   AdminPanelSettings,
   Dataset,
   CloudUpload,
-  Schedule,
-  ExpandMore,
-  ExpandLess,
   Save,
   Refresh,
-  Warning,
   CheckCircle,
-  Info,
-  Edit,
-  Delete,
-  Add,
   Download,
-  Upload,
 } from '@mui/icons-material'
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { supabase } from '../lib/supabase'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { format } from 'date-fns'
 
 interface TabPanelProps {
@@ -75,12 +65,12 @@ function TabPanel(props: TabPanelProps) {
 const PlatformSettings: React.FC = () => {
   const [currentTab, setCurrentTab] = useState(0)
   const [saving, setSaving] = useState(false)
-  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
-    general: true,
-    security: false,
-    notifications: false,
-    backup: false,
-  })
+  // const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
+  //   general: true,
+  //   security: false,
+  //   notifications: false,
+  //   backup: false,
+  // })
 
   const [settings, setSettings] = useState({
     // General Settings
@@ -116,7 +106,7 @@ const PlatformSettings: React.FC = () => {
     lastBackup: new Date().toISOString(),
   })
 
-  const queryClient = useQueryClient()
+  // const queryClient = useQueryClient()
 
   // Mock system status data
   const { data: systemStatus } = useQuery({
@@ -136,7 +126,7 @@ const PlatformSettings: React.FC = () => {
     refetchInterval: 30000, // Refresh every 30 seconds
   })
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setCurrentTab(newValue)
   }
 
@@ -147,12 +137,12 @@ const PlatformSettings: React.FC = () => {
     }))
   }
 
-  const handleSectionToggle = (section: string) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [section]: !prev[section],
-    }))
-  }
+  // const handleSectionToggle = (section: string) => {
+  //   setExpandedSections(prev => ({
+  //     ...prev,
+  //     [section]: !prev[section],
+  //   }))
+  // }
 
   const handleSaveSettings = async () => {
     setSaving(true)

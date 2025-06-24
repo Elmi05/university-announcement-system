@@ -2,14 +2,9 @@ import React, { useState } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import {
   Box,
-  Container,
   Typography,
-  Card,
-  CardContent,
-  Grid,
   Button,
   Avatar,
-  Stack,
   Chip,
   IconButton,
   Menu,
@@ -21,12 +16,10 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  ListItemButton,
   Divider,
   useTheme,
   useMediaQuery,
   Paper,
-  CircularProgress,
   CssBaseline,
   Fade,
   Badge,
@@ -41,9 +34,6 @@ import {
   Logout,
   Menu as MenuIcon,
   Notifications,
-  Add,
-  TrendingUp,
-  Announcement,
 } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
@@ -76,7 +66,7 @@ const PlatformAdminDashboard: React.FC = () => {
   const navigate = useNavigate()
   const location = useLocation()
   const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+  // const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   const [mobileOpen, setMobileOpen] = useState(false)
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 

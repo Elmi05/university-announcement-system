@@ -126,7 +126,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         email: validCred.email,
         user_metadata: {
           user_type: validCred.role,
-          university_id: null,
+          university_id: undefined,
           profile: {
             university_name: 'Platform Admin'
           }
