@@ -18,7 +18,6 @@ import {
   ListItemText,
   Divider,
   useTheme,
-  useMediaQuery,
   Paper,
   CssBaseline,
   Fade,

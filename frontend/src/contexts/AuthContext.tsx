@@ -64,7 +64,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     email: string, 
     password: string, 
     userType: 'platform_admin' | 'university_admin' | 'university_user',
-    universityId?: string
+    _universityId?: string
   ) => {
     let validUser = null
 

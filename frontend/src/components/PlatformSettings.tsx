@@ -37,7 +37,7 @@ import {
   CheckCircle,
   Download,
 } from '@mui/icons-material'
-import { useQuery, useQueryClient } from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query'
 import { format } from 'date-fns'
 
 interface TabPanelProps {
