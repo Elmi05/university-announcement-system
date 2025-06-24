@@ -1,0 +1,18 @@
+{
+  "name": "uni-announcement-system",
+  "version": "1.0.0",
+  "description": "Multi-Tenant University Announcement System",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "preview": "cd frontend && npm run preview",
+    "install-frontend": "cd frontend && npm install",
+    "setup": "cd frontend && npm install && npm run dev"
+  },
+  "keywords": ["university", "announcement", "multi-tenant", "react", "supabase"],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+} 
